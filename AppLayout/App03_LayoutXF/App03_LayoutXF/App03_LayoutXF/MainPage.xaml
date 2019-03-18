@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App03_LayoutXF"
+             x:Class="App03_LayoutXF.MainPage"
+             BackgroundImage=""
+             >
+
+    <StackLayout>
+        <Button Margin="5" Text="Stack" Clicked="GoPaginaStack" />
+        <Button Margin="5" Text="Grid" Clicked="GoPaginaGrid" />
+        <Button Margin="5" Text="Absolute" Clicked="GoPaginaAbsolute"/>
+        <Button Margin="5" Text="Relative" Clicked="GoPaginaRelative"/>
+        <Button Margin="5" Text="Scroll" Clicked="GoPaginaScroll"/>
+      
+        
+        <Label Text="Desenvolvido por Leamsy Heitor" TextColor="Wheat"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+
+</ContentPage>
