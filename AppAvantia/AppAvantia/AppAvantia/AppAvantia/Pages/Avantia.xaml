@@ -5,34 +5,45 @@
              x:Class="AppAvantia.Pages.Avantia"
              >
     <ContentPage.Content>
-        
-        <StackLayout>
-            <StackLayout Padding="20">
-            <forms:VideoView WidthRequest="120"
-                             HeightRequest="120"
+
+        <StackLayout Spacing="0">
+            <StackLayout Orientation="Vertical" Spacing="0" Padding="0">
+                <forms:VideoView WidthRequest="360"
+                             HeightRequest="220"
                              />
+                
                 <Button x:Name="PlayStopButton" 
-                    Text="Play" FontSize="10"
+                    Text="Play" FontSize="15" TextColor="White"
                     Clicked="PlayStop_Clicked"
-                    WidthRequest="60"
-                    HeightRequest="60"
-                    VerticalOptions="Center" HorizontalOptions="Center"
-                   />
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    VerticalOptions="Start" 
+                    BackgroundColor="#0D1F2D"
+                    />
             </StackLayout>
-            <StackLayout Padding="30" BackgroundColor="#0D1F2D" HeightRequest="10" WidthRequest="10">
-                <Label Text="Empresa" FontSize="10" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+            
+            <StackLayout Spacing="0" VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+
+                <Label Text="A Avantia atua com soluções integradas&#10; em tecnologia engenharia,oferecendo,&#10;há 20 anos,serviços de segurança eletrônica&#10; através do videomonitoramento inteligente.&#10;Com diversos cases de sucesso nos setores públicos e privados,contamos com uma equipe capacitada e qualificada,&#10;além dos melhores e mais importantes fabricantes do mercado para identificar necessidades e apresentar soluções." 
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       x:Name="lbDescricao"
+                       FontSize="18"/>
+            
             </StackLayout>
-            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
-            <ScrollView>
-                    <Label Text="A Avantia atua com soluções integradas em tecnologia e engenharia,
-                       oferecendo, há 20 anos, serviços de segurança eletrônica através do 
-                       videomonitoramento inteligente.
-                       Com diversos cases de sucesso nos setores públicos e privados, 
-                       contamos com uma equipe capacitada e qualificada,
-                       além dos melhores e mais importantes fabricantes do mercado para identificar
-                       necessidades e apresentar soluções." VerticalTextAlignment="Center"/>
-            </ScrollView>
+            
+            <StackLayout Spacing="0" Padding="15" BackgroundColor="#0D1F2D" HeightRequest="10" WidthRequest="10" >
+                <Label Text="Missão" TextColor="White" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center"/>
             </StackLayout>
+
+            <StackLayout Spacing="0" VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+
+                <Label Text="Prestar serviços de valor e qualidade superiores com flexibilidade, compromisso, competência, inovação, a preços justos e entendendo as necessidades dos nossos clientes." 
+                       VerticalTextAlignment="Center"
+                       FontSize="18"/>
+
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

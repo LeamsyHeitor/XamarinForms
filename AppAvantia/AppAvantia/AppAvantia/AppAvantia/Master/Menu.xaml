@@ -8,10 +8,9 @@
         <ContentPage Title="Menu" Padding="0" BackgroundColor="#0D1F2D">
             <StackLayout>
                 <StackLayout BackgroundColor="White" Spacing="80">
-                    <Image Source="logo.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <ImageButton Source="logo.png" HorizontalOptions="Center" VerticalOptions="Center" Clicked="GoPaginaAvantia" Aspect="AspectFill" BackgroundColor="White"/>
                 </StackLayout>
                 <StackLayout>
-                   
                     <Button Text="Silvio Aragão" FontSize="20" TextColor="White" BackgroundColor="Transparent" 
                             Clicked="GoPaginaSilvio"/>
                     <Button Text="Eduardo Ferreira Lima" FontSize="20" TextColor="White" BackgroundColor="Transparent" 

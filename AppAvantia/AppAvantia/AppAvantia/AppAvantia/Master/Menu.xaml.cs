@@ -19,15 +19,18 @@ namespace AppAvantia.Master
 		}
     
         public void GoPaginaSilvio(object sender, EventArgs args) {
-            Detail = new Pages.Perfil();
+            Detail = new NavigationPage(new Pages.Perfil());
+            IsPresented = false;
         }
         public void GoPaginaEduardo(object sender, EventArgs args)
         {
-            Detail = new Pages.Perfil2();
+            Detail = new NavigationPage(new Pages.Perfil2());
+            IsPresented = false;
         }
         public void GoPaginaAvantia(object sender, EventArgs args)
         {
-            Detail = new Pages.Avantia();
+            Detail = new NavigationPage(new Pages.Avantia());
+            IsPresented = false;
         }
     }
 }

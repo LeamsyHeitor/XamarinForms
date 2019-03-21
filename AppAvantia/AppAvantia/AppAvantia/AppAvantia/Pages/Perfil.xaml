@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout Spacing="0">
         <RelativeLayout VerticalOptions="Start" HeightRequest="100" >
-                <BoxView Color="#e3e3e3" HeightRequest="100"
+                <BoxView Color="White" HeightRequest="200"
                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"/>
 
                 <controls:CircleImage 
@@ -52,8 +52,9 @@
                     
                 </StackLayout>
             </Grid>
-            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                
+            <StackLayout Spacing="0" VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+                <Label Text="Silvio veio de uma família sem muitos recursos e começou sua história com office boy de um banco, onde ficou até ingressar na faculdade de engenharia elétrica. Depois de formado, voltou para o mesmo banco e trabalhou em como técnico, enquanto juntava dinheiro para seguir o caminho do pai e abrir seu próprio negócio na área de instalação de sistemas elétricos. Em pouco tempo, o negócio de Silvio já contava com 80 funcionários. Ao retornar à universidade para concluir o MBA, Silvio reencontrou seu amigo de infância, Eduardo, empreendedor nato e dono de um banco de micro-finanças. Eduardo estava procurando novos negócios para investir e decidiu comprar 40% da empresa de Silvio, que, percebendo a demanda do mercado por sistemas de segurança, passou a se chamar Avantia."
+                  FontSize="18"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
