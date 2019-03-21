@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Plugin.MediaManager.Forms;assembly=Plugin.MediaManager.Forms"
+             x:Class="AppAvantia.Pages.Avantia"
+             >
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <StackLayout Padding="20">
+            <forms:VideoView WidthRequest="120"
+                             HeightRequest="120"
+                             />
+                <Button x:Name="PlayStopButton" 
+                    Text="Play" FontSize="10"
+                    Clicked="PlayStop_Clicked"
+                    WidthRequest="60"
+                    HeightRequest="60"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                   />
+            </StackLayout>
+            <StackLayout Padding="30" BackgroundColor="#0D1F2D" HeightRequest="10" WidthRequest="10">
+                <Label Text="Empresa" FontSize="10" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+            <ScrollView>
+                    <Label Text="A Avantia atua com soluções integradas em tecnologia e engenharia,
+                       oferecendo, há 20 anos, serviços de segurança eletrônica através do 
+                       videomonitoramento inteligente.
+                       Com diversos cases de sucesso nos setores públicos e privados, 
+                       contamos com uma equipe capacitada e qualificada,
+                       além dos melhores e mais importantes fabricantes do mercado para identificar
+                       necessidades e apresentar soluções." VerticalTextAlignment="Center"/>
+            </ScrollView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

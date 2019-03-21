@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pag="clr-namespace:AppAvantia.Pages"
+             x:Class="AppAvantia.Master.Menu">
+    <MasterDetailPage.Master>
+        <!--Menu-->
+        <ContentPage Title="Menu" Padding="0" BackgroundColor="#0D1F2D">
+            <StackLayout>
+                <StackLayout BackgroundColor="White" Spacing="80">
+                    <Image Source="logo.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                   
+                    <Button Text="Silvio Aragão" FontSize="20" TextColor="White" BackgroundColor="Transparent" 
+                            Clicked="GoPaginaSilvio"/>
+                    <Button Text="Eduardo Ferreira Lima" FontSize="20" TextColor="White" BackgroundColor="Transparent" 
+                            Clicked="GoPaginaEduardo"/>
+                    <Button Text="Sobre Avantia" FontSize="20" TextColor="White" BackgroundColor="Transparent" 
+                            Clicked="GoPaginaAvantia"/>
+                </StackLayout>
+            </StackLayout>
+            
+        </ContentPage>
+        
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <!--Paginas-->
+        <NavigationPage>
+            <x:Arguments>
+                <pag:Avantia/>
+            </x:Arguments>
+        </NavigationPage>
+        
+    </MasterDetailPage.Detail>    
+</MasterDetailPage>
