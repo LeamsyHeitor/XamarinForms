@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             x:Class="App2_Tarefa.Telas.Cadastro">
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout HeightRequest="200">
+                <TableView Intent="Data" BackgroundColor="Transparent" RowHeight="200">
+                    <TableView.HeightRequest>
+                        <!-- Tendo que tornar a exibição de tabela grande o suficiente no Android para ver todas as quatro linhas,
+                  mais o cabeçalho indesejado -->
+                        <OnPlatform x:TypeArguments="x:Double" iOS="176" Android="232" />
+                    </TableView.HeightRequest>
+                    <TableView.Root>
+                        <TableSection >
+                            <TextCell  Text="Meu Dia" Detail="Quinta,22/02" TextColor="White">
+                                <xfg:CellGloss.BackgroundGradient >
+                                    <xfg:Gradient  StartColor="#128ee8" EndColor="#8c069b" IsRotationLeftToRight="true" />
+                                </xfg:CellGloss.BackgroundGradient>
+                            </TextCell>
+                        </TableSection>
+                    </TableView.Root>
+                </TableView>
+            </StackLayout>
+            <StackLayout Padding="20">
+                <Label Text="Nome" FontAttributes="Bold"/>
+                <Entry x:Name="TxtNome"/>
+                <Label Text="Prioridade" FontAttributes="Bold"/>
+                <StackLayout x:Name="SLPrioridades">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                    <On Platform="Android, ios" Value="p4.png" />
+                                </OnPlatform>
+                        </Image.Source>
+                        </Image>
+                        <Label Text="Urgente e importante" TextColor="Gray" HorizontalOptions="FillAndExpand"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="PrioridadeSelection"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <StackLayout  Orientation="Horizontal" Spacing="10">
+                        <Image>
+                            <Image.Source>
+                                <OnPlatform x:TypeArguments="ImageSource">
+                                    <On Platform="Android, ios" Value="p3.png" />
+                                </OnPlatform>
+                            </Image.Source>
+                        </Image>
+                        <Label Text="Urgente e não importante" TextColor="Gray" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Image>
+                            <Image.Source>
+                                <OnPlatform x:TypeArguments="ImageSource">
+                                    <On Platform="Android, ios" Value="p2.png" />
+                                </OnPlatform>
+                            </Image.Source>
+                        </Image>
+                        <Label Text="Não urgente e importante" TextColor="Gray" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Image>
+                            <Image.Source>
+                                <OnPlatform x:TypeArguments="ImageSource">
+                                    <On Platform="Android, ios" Value="p1.png" />
+                                </OnPlatform>
+                            </Image.Source>
+                        </Image>
+                        <Label Text="Não urgente e Não importante" TextColor="Gray" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <Button Text="Ok" TextColor="White" HorizontalOptions="End" BackgroundColor="Blue"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

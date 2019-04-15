@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             x:Class="App2_Tarefa.Telas.Inicio">
+    
+      <!--Coloca a pagina toda em gradiente-->     
+      <!--<xfg:ContentPageGloss.BackgroundGradient>
+        <xfg:Gradient Rotation="150">
+            <xfg:GradientStep StepColor="White" StepPercentage="0" />
+            <xfg:GradientStep StepColor="White" StepPercentage=".5" />
+            <xfg:GradientStep StepColor="#8c069b" StepPercentage="1" />
+        </xfg:Gradient>
+      </xfg:ContentPageGloss.BackgroundGradient>-->
+    <Grid>
+       <StackLayout >
+         <StackLayout HeightRequest="200">
+           <TableView Intent="Data" BackgroundColor="Transparent" RowHeight="200">
+              <TableView.HeightRequest>
+          <!-- Tendo que tornar a exibição de tabela grande o suficiente no Android para ver todas as quatro linhas,
+                  mais o cabeçalho indesejado -->
+                <OnPlatform x:TypeArguments="x:Double" iOS="176" Android="232" />
+              </TableView.HeightRequest>
+                <TableView.Root>
+                    <TableSection >
+                        <TextCell  Text="Meu Dia" Detail="Quinta,22/02" TextColor="White">
+                            <xfg:CellGloss.BackgroundGradient >
+                                <xfg:Gradient  StartColor="#128ee8" EndColor="#8c069b" IsRotationLeftToRight="true" />
+                            </xfg:CellGloss.BackgroundGradient>
+                        </TextCell>
+                   </TableSection>
+                </TableView.Root>
+            </TableView>
+        </StackLayout>
+            
+            <StackLayout x:Name="SLTarefas" Padding="10" Spacing="10" >
+                <StackLayout Orientation="Horizontal" Spacing="15">
+                <Image VerticalOptions="Center">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android, ios" Value="CheckOff.png" />
+                        </OnPlatform>
+                    </Image.Source>
+                </Image>
+                <Image VerticalOptions="Center"/>
+                    <Label HorizontalOptions="FillAndExpand" Text="Task 1"/>
+                <Image VerticalOptions="Center">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android, ios" Value="p4.png" />
+                        </OnPlatform>
+                    </Image.Source>
+                </Image>
+                    <Image VerticalOptions="Center">
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, ios" Value="Delete.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="15">
+                    <Image VerticalOptions="Center">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android, ios" Value="CheckOn.png" />
+                        </OnPlatform>
+                    </Image.Source>
+                </Image>
+                <StackLayout VerticalOptions="Center" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                        <Label Text="Task 1" TextColor="Gray"/>
+                        <Label Text="Finalizado em 20/01/2018 - 17:00h" TextColor="LightGray" FontSize="10"/>
+                    </StackLayout>
+                <Image VerticalOptions="Center">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android, ios" Value="p3.png" />
+                        </OnPlatform>
+                    </Image.Source>
+                </Image>
+                <Image VerticalOptions="Center">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android, ios" Value="Delete.png" />
+                        </OnPlatform>
+                    </Image.Source>
+                </Image>
+            </StackLayout>
+            </StackLayout>
+
+        <Button HorizontalOptions="Center" BackgroundColor="Transparent" Clicked="ActionGoCadastro" >
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource" >
+                    <On Platform="Android, ios" Value="AddBotao.png" />
+                </OnPlatform>
+            </Button.Image>
+        </Button>
+           
+        </StackLayout>
+    </Grid>
+</ContentPage>
+
