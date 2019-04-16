@@ -2,8 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
-             x:Class="App2_Tarefa.Telas.Inicio">
-    
+             x:Class="App2_Tarefa.Telas.Inicio"
+             NavigationPage.HasNavigationBar="False"
+             >
+              
       <!--Coloca a pagina toda em gradiente-->     
       <!--<xfg:ContentPageGloss.BackgroundGradient>
         <xfg:Gradient Rotation="150">
@@ -23,12 +25,17 @@
               </TableView.HeightRequest>
                 <TableView.Root>
                     <TableSection >
-                        <TextCell  Text="Meu Dia" Detail="Quinta,22/02" TextColor="White">
-                            <xfg:CellGloss.BackgroundGradient >
+                            <TextCell  Text="Meu Dia" TextColor="White">
+                                <xfg:CellGloss.BackgroundGradient >
                                 <xfg:Gradient  StartColor="#128ee8" EndColor="#8c069b" IsRotationLeftToRight="true" />
                             </xfg:CellGloss.BackgroundGradient>
                         </TextCell>
-                   </TableSection>
+                            <TextCell  Detail="Quinta, 22/02" TextColor="White">
+                                <xfg:CellGloss.BackgroundGradient >
+                                    <xfg:Gradient  StartColor="#128ee8" EndColor="#8c069b" IsRotationLeftToRight="true" />
+                                </xfg:CellGloss.BackgroundGradient>
+                            </TextCell>
+                        </TableSection>
                 </TableView.Root>
             </TableView>
         </StackLayout>
