@@ -27,10 +27,10 @@
                     <TableSection >
                             <TextCell  Text="Meu Dia" TextColor="White">
                                 <xfg:CellGloss.BackgroundGradient >
-                                <xfg:Gradient  StartColor="#128ee8" EndColor="#8c069b" IsRotationLeftToRight="true" />
-                            </xfg:CellGloss.BackgroundGradient>
-                        </TextCell>
-                            <TextCell  Detail="Quinta, 22/02" TextColor="White">
+                                    <xfg:Gradient  StartColor="#128ee8" EndColor="#8c069b" IsRotationLeftToRight="true" />
+                                </xfg:CellGloss.BackgroundGradient>
+                            </TextCell>
+                              <TextCell  Text="" x:Name="DataHoje" TextColor="White">
                                 <xfg:CellGloss.BackgroundGradient >
                                     <xfg:Gradient  StartColor="#128ee8" EndColor="#8c069b" IsRotationLeftToRight="true" />
                                 </xfg:CellGloss.BackgroundGradient>

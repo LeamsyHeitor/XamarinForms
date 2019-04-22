@@ -17,6 +17,8 @@ namespace App2_Tarefa.Telas
 		public Inicio ()
 		{
 			InitializeComponent ();
+
+            DataHoje.Text = DateTime.Now.DayOfWeek.ToString() + "," + DateTime.Now.ToString("dd/MM");
 		}
 
         private void ActionGoCadastro(object sender, EventArgs e)
