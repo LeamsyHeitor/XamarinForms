@@ -3,14 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App2_Cinemix"
              x:Class="App2_Cinemix.MainPage">
-
-    <StackLayout>
-        <StackLayout>
+    <ContentPage.Content>
+        <ScrollView>
             <StackLayout>
+             <StackLayout>
+              <StackLayout Style="{StaticResource Cabecalho}">
                 <Label Text="CINEMIX" Style="{StaticResource TituloApp}"/>
-                <Label Text="Seu App de Cinema" Style="{StaticResource SubtituloApp}"/>
+                 <Label Text="Seu App de Cinema" Style="{StaticResource SubtituloApp}"/>
             </StackLayout>
-        </StackLayout>
-    </StackLayout>
+              <StackLayout Style="{StaticResource Conteudo}">
+                <Label Text="Lançamento" Style="{StaticResource Lancamento}"/>
+                <Label Text="Vingadores Ultimato" Style="{StaticResource TituloFilme}" />
 
+                        <AbsoluteLayout x:Name="Fundo">
+                            <Image AbsoluteLayout.LayoutBounds="0,0,340,450" Source="Fundo.png" />
+                        </AbsoluteLayout>
+                        <RelativeLayout>
+                            <Image RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=Fundo,Property=X,Factor=1,Constant=-50}" Source="Poster.png"  
+                                   />
+                        </RelativeLayout>  
+              </StackLayout>
+             </StackLayout>
+            </StackLayout>
+      </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

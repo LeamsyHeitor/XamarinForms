@@ -4,6 +4,17 @@
              x:Class="App2_Cinemix.App">
     <Application.Resources>
         <ResourceDictionary>
+            <Style x:Key="Cabecalho" TargetType="StackLayout">
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Spacing" Value="0" />
+            </Style>
+            <Style x:Key="Conteudo" TargetType="StackLayout">
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="BackgroundColor" Value="#6A34B0"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+            </Style>
+            
             <Style x:Key="Titulo" TargetType="Label">
                 <Setter Property="FontFamily" Value="Segoe UI"/>
                 <Setter Property="TextColor" Value="#6A34B0"/>
@@ -15,6 +26,16 @@
             </Style>
             <Style x:Key="SubtituloApp" TargetType="Label" BasedOn="{StaticResource Titulo}">
                 <Setter Property="FontSize" Value="12"/>
+            </Style>
+            <Style x:Key="Lancamento" TargetType="Label" BasedOn="{StaticResource SubtituloApp}">
+               <Setter Property="TextColor" Value="#947AC4"/>
+               <Setter Property="HorizontalOptions" Value="Start"/>
+              
+            </Style>
+            <Style x:Key="TituloFilme" TargetType="Label" BasedOn="{StaticResource SubtituloApp}">
+                <Setter Property="TextColor" Value="#FFFFFF"/>
+                <Setter Property="FontSize" Value="34"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
         </ResourceDictionary>
 
