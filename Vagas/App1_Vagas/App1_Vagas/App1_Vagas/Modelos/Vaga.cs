@@ -11,6 +11,7 @@ namespace App1_Vagas.Modelos
         [PrimaryKey,AutoIncrement]
         public int Id { get; set; }
         public string NomeVaga { get; set; }
+        public string Empresa { get; set; }
         public short Quantidade { get; set; }
         public string Cidade { get; set; }
         public double Salario { get; set; }
