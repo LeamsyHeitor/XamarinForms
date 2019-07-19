@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              x:Class="App1_Vagas.Paginas.ConsultaVagas">
     <ContentPage.Content>
         <StackLayout>
@@ -8,12 +9,27 @@
                 <Label Text="Vagas" FontSize="24"/>
                 <Label Text="econtre seu emprego aqui" FontSize="18" HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
-        <StackLayout>
+
             <StackLayout>
-            <Button Text="Adicionar" Clicked="GoCadastro" />
-            <Button Text="Minhas Vagas" Clicked="GoMinhasVagas"/>
+                <StackLayout>
+                    <forms:CarouselView x:Name="TextoCarouselView" VerticalOptions="CenterAndExpand">
+                        <forms:CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+
+                                    <Image Source="{Binding .}" >
+                                      
+                                    </Image>
+                                </StackLayout>
+                            </DataTemplate>
+                        </forms:CarouselView.ItemTemplate>
+                    </forms:CarouselView>
+                </StackLayout>
+                <StackLayout BackgroundColor="Red">
+                    <Button Text="Adicione" Clicked="GoCadastro" />
+            <Button Text="Minhas Vagassss" Clicked="GoMinhasVagas"/>
             </StackLayout>
-                <Entry Placeholder="Pesquisar" TextChanged="Pesquisar"/>
+                <Entry Placeholder="Pesquisar" TextChanged="PesquisarAction"/>
                 <Label Text="" x:Name="lblCount"/>
                 <ListView x:Name="ListaVagas">
                     <ListView.ItemTemplate>
@@ -38,7 +54,16 @@
                                         <TapGestureRecognizer Tapped="MaisDetalhe" CommandParameter="{Binding .}"/>
                                     </Label.GestureRecognizers>
                                 </Label>
-                            </Grid>
+                                    <FlexLayout 
+                                        Grid.Row="1"
+                                        BackgroundColor="Green"
+                                        Direction="Row"
+                                        AlignItems="Center"
+                                        >
+                                    </FlexLayout>
+
+                                    
+                                </Grid>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppYellow.View.MyWalletView"
+             Title="My wallet"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="FrameOptions" TargetType="Frame">
+                <Setter Property="Margin" Value="10" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout
+            BackgroundColor="Fuchsia"
+            Padding="25"
+            >
+            <Frame
+                BackgroundColor="{StaticResource MainColor}"
+                HeightRequest="190"
+                Padding="0"
+                HasShadow="False"
+                CornerRadius="10"
+                >
+                <Grid>
+                    <Image 
+                        Source="wallet_background_wallet.png"
+                    />
+
+                    <FlexLayout
+                        Direction="Row"
+                        Padding="10"
+                        AlignItems="Stretch"
+                    >
+                        <Label 
+                            Text="Current Balance"
+                            FlexLayout.Grow="1"
+                            FontSize="26"
+                            VerticalTextAlignment="Center"
+                        />
+
+                        <FlexLayout
+                            FlexLayout.Grow="1"
+                            Direction="Column"
+                            AlignItems="End"
+                            JustifyContent="Center"
+                        >
+                            <Label 
+                                Text="R$ 3,00"
+                                FontSize="30"
+                            />
+
+                            <Button 
+                                Style="{StaticResource WhiteButtonSmall}"
+                                Text="ADD"
+                            />
+                        </FlexLayout>
+                    </FlexLayout>
+                </Grid>
+
+            </Frame>
+
+            <Label
+                Text="Use cash balance to:"
+                FontAttributes="Bold"
+                FontSize="Medium"
+            />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

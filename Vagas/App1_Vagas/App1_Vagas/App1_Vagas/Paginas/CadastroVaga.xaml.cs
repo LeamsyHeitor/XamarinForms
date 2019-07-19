@@ -14,7 +14,7 @@ namespace App1_Vagas.Paginas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CadastroVaga : ContentPage
 	{
-		public CadastroVaga ()
+		public CadastroVaga (Vaga vaga)
 		{
 			InitializeComponent ();
 		}

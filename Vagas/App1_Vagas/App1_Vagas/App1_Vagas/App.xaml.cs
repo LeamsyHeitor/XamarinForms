@@ -10,8 +10,13 @@ namespace App1_Vagas
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new Paginas.ConsultaVagas());
+
+#if DEBUG
+            HotReloader.Current.Run(this);
+#endif
+            
+
         }
 
         protected override void OnStart()

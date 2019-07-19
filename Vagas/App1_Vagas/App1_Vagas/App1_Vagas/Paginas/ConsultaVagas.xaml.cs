@@ -24,15 +24,35 @@ namespace App1_Vagas.Paginas
             ListaVagas.ItemsSource = Lista;
 
             lblCount.Text = Lista.Count.ToString();
+
+            var listaTexto = new List<string>
+            {
+
+              
+                "image.jpg",
+                  "Texto 1",
+                "Texto 2",
+
+            };
+
+            TextoCarouselView.ItemsSource = listaTexto;
+
+            //var listalink = new List<string>
+            //{
+               
+            //    "https://www.google.com/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwie57Ptu_XiAhWYLLkGHaAiBeUQjRx6BAgBEAU&url=https%3A%2F%2Fcolunaitalo.com.br%2Fcultura-e-lazer%2F663%2Fdeadpool-2-tem-estreia-marcada-no-cine-vip&psig=AOvVaw3KOZulDkgO7FV2DlTlXryX&ust=1561030922297597",
+            //};
+
+
         }
 
         public void GoCadastro(object sender, EventArgs args)
         {
-            Navigation.PushAsync(new CadastroVaga());
+            //Navigation.PushAsync(new CadastroVaga());
         }
         public void GoMinhasVagas(object sender, EventArgs args)
         {
-            Navigation.PushAsync(new MinhasVagasCadastradas());
+            //Navigation.PushAsync(new MinhasVagasCadastradas());
         }
 
         public void MaisDetalhe(object sender, EventArgs args)
@@ -44,9 +64,9 @@ namespace App1_Vagas.Paginas
             Navigation.PushAsync(new DetalheVaga(vaga));
         }
 
-        public void Pesquisar(object sender, TextChangedEventArgs args)
+        public void PesquisarAction(object sender, TextChangedEventArgs args)
         {
-            Lista.Where(a => a.NomeVaga.Contains(args.NewTextValue)).ToList();
+            ListaVagas.ItemsSource = Lista.Where(a=>a.NomeVaga.Contains(args.NewTextValue)).ToList();
         }
     }
 }
