@@ -26,6 +26,9 @@
                 <Button Text="Acertou" BackgroundColor="LightGreen" CornerRadius="3"/>
                 <Button Text="Errou" BackgroundColor="OrangeRed" CornerRadius="3"/>
             </StackLayout>
+            <StackLayout>
+                <Label Text="Iniciar"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.ComponentModel;
 
 namespace App3_JogoMimica.View
 {
@@ -19,13 +20,23 @@ namespace App3_JogoMimica.View
             BindingContext = new Grupo();
         }
 
-        public class Grupo
+        public class Grupo : INotifyPropertyChanged
         {
-            public string NomeGrupo1 { get; set; }
+            private string _NomeGrupo1;
+            public string NomeGrupo1 { get { return _NomeGrupo1; } set { _NomeGrupo1 = value; PropriedadeMudada("NomeGrupo1"); } }
             public Grupo()
             {
                 NomeGrupo1 = "Os Machos";
- 
+
+            }
+            public event PropertyChangedEventHandler PropertyChanged;
+
+            private void PropriedadeMudada(string NomePropriedade)
+            {
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this,new PropertyChangedEventArgs(NomePropriedade));
+                }
             }
         }
 

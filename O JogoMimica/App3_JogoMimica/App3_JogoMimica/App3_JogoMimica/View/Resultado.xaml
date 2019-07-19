@@ -9,9 +9,9 @@
         <StackLayout>
             <StackLayout>
                 <Label Text="Grupo 1" FontSize="20"/>
-                <Label Text="30 pontos" FontSize="64"/>
+                <Label Text="30 pontos" FontSize="64" HorizontalOptions="CenterAndExpand"/>
                 <Label Text="Grupo2" FontSize="20"/>
-                <Label Text="120 pontos" FontSize="64"/>
+                <Label Text="120 pontos" FontSize="64" HorizontalOptions="CenterAndExpand"/>
                 <Button Text="Jogar outra vez" CornerRadius="3" BackgroundColor="CornflowerBlue"/>
             </StackLayout>
         </StackLayout>

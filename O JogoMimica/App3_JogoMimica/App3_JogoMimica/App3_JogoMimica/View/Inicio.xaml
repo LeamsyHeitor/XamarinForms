@@ -39,7 +39,7 @@
                 <Entry Text="7"/>
 
                 <Button x:Name="ButtonIniciar" Text="Iniciar" TextColor="White" CornerRadius="5" BackgroundColor="Black" BorderColor="Gray" Margin="5,5,5,5"/>
-            </FlexLayout>
+            </FlexLayout>               
         </StackLayout>
         </Grid>
     </ContentPage.Content>
