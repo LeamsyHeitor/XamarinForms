@@ -6,29 +6,40 @@
              mc:Ignorable="d"
              x:Class="App3_JogoMimica.View.Jogo">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout>
-            <FlexLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+        <StackLayout >
+            <StackLayout Orientation="Vertical" >
+            <FlexLayout >
                 <Label Text="Grupo"/>
-                <Label Text="Palavra - Pontuação (1)"/>
-                <Label Text="*********************" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="{Binding PalavraPontuacao}"/>
+                <Label Text="{Binding Palavra}" HorizontalOptions="CenterAndExpand"/>
+                <Button Text="Mostrar" IsVisible="{Binding IsVisibleBtnMostrar}" Command="{Binding MostrarPalavra}"/>
             </FlexLayout>
             </StackLayout>
 
+           <StackLayout IsVisible="{Binding IsVisibleContainerContagem}">
             <StackLayout>
-            <FlexLayout>
-                <Label Text="200" FontSize="100" HorizontalOptions="CenterAndExpand"/>
+                    <FlexLayout AlignItems="Center" Direction="Column">
+                <Label Text="{Binding TextoContagem}" FontSize="100" HorizontalOptions="CenterAndExpand"/>
                 <Label Text="seg" HorizontalOptions="CenterAndExpand"/>
             </FlexLayout>                
          </StackLayout>
 
-        <StackLayout Orientation="Horizontal">
-                <Button Text="Acertou" BackgroundColor="LightGreen" CornerRadius="3"/>
-                <Button Text="Errou" BackgroundColor="OrangeRed" CornerRadius="3"/>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Acertou" BackgroundColor="LightGreen" CornerRadius="3" Command="{Binding Acertou}"/>
+                    <Button Text="Errou" BackgroundColor="OrangeRed" CornerRadius="3" Command="{Binding Error}"/>
+                </StackLayout>
+                    <StackLayout IsVisible="{Binding IsVisibleContainerIniciar}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+                <Button Text="Iniciar" Command="{Binding Iniciar}"/>
             </StackLayout>
-            <StackLayout>
-                <Label Text="Iniciar"/>
-            </StackLayout>
+          </StackLayout>
         </StackLayout>
+      </Grid>
     </ContentPage.Content>
 </ContentPage>
