@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App3_JogoMimica.Model;
 
 namespace App3_JogoMimica.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Jogo : ContentPage
     {
-        public Jogo()
+        public Jogo(Grupo grupo)
         {
             InitializeComponent();
 
-            BindingContext = new ViewlModel.JogoViewModel();
+            BindingContext = new ViewlModel.JogoViewModel(grupo);
         }
     }
 }

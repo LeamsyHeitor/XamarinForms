@@ -25,7 +25,7 @@ namespace App3_JogoMimica.ViewlModel
         {
             Armazenamento.Armazenamento.Jogo = this.Jogo;
             Armazenamento.Armazenamento.RodadaAtual = 1;
-            App.Current.MainPage = new View.Jogo();
+            App.Current.MainPage = new View.Jogo(Jogo.Grupo1);
         }
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string NameProperty)

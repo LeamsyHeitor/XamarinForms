@@ -8,11 +8,11 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <Label Text="Grupo 1" FontSize="20"/>
-                <Label Text="30 pontos" FontSize="64" HorizontalOptions="CenterAndExpand"/>
-                <Label Text="Grupo2" FontSize="20"/>
-                <Label Text="120 pontos" FontSize="64" HorizontalOptions="CenterAndExpand"/>
-                <Button Text="Jogar outra vez" CornerRadius="3" BackgroundColor="CornflowerBlue"/>
+                <Label Text="{Binding Jogo.Grupo1.Nome}" FontSize="20"/>
+                <Label Text="{Binding Jogo.Grupo1.Pontuacao}" FontSize="64" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="{Binding Jogo.Grupo2.Nome}" FontSize="20"/>
+                <Label Text="{Binding Jogo.Grupo2.Pontuacao}" FontSize="64" HorizontalOptions="CenterAndExpand"/>
+                <Button Text="Jogar outra vez" Command="{Binding JogarNovamente}" CornerRadius="3" BackgroundColor="CornflowerBlue"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

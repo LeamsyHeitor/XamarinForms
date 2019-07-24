@@ -16,7 +16,7 @@
         <StackLayout >
             <StackLayout Orientation="Vertical" >
             <FlexLayout >
-                <Label Text="Grupo"/>
+                <Label Text="{Binding NomeGrupo}"/>
                 <Label Text="{Binding PalavraPontuacao}"/>
                 <Label Text="{Binding Palavra}" HorizontalOptions="CenterAndExpand"/>
                 <Button Text="Mostrar" IsVisible="{Binding IsVisibleBtnMostrar}" Command="{Binding MostrarPalavra}"/>
@@ -35,9 +35,10 @@
                     <Button Text="Acertou" BackgroundColor="LightGreen" CornerRadius="3" Command="{Binding Acertou}"/>
                     <Button Text="Errou" BackgroundColor="OrangeRed" CornerRadius="3" Command="{Binding Error}"/>
                 </StackLayout>
-                    <StackLayout IsVisible="{Binding IsVisibleContainerIniciar}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+                </StackLayout>
+                <StackLayout IsVisible="{Binding IsVisibleContainerIniciar}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
                 <Button Text="Iniciar" Command="{Binding Iniciar}"/>
-            </StackLayout>
+            
           </StackLayout>
         </StackLayout>
       </Grid>
